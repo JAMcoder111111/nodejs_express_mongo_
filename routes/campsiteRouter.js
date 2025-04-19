@@ -151,7 +151,7 @@ campsiteRouter.route('/:campsiteId/comments/:commentId')
                 })
                 .catch(err => next(err));
             } else {
-                err = new Error('You are not authorized to delete this comment!');
+                err = new Error('You are not authorized to update this comment!');
                 err.status = 403;
                 return next(err);
             }
